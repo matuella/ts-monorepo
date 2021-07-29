@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    // Type Checking
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    
+    // Modules
+    "baseUrl": ".",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "paths": {
+      "@api/*" : ["packages/api/*"],
+      "@core/*" : ["packages/core/*"],
+      "@other-stuff/*" : ["packages/other-stuff/*"],
+    },
+    "resolveJsonModule": true, // Added just for jest.config.ts
+
+    // Emit
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+
+    // Interop Constraints
+    "forceConsistentCasingInFileNames": true,
+
+    // Language and Environment
+    "lib": ["ES2020"],
+    "target": "ES2020",
+
+    // Projects
+    "composite": true,
+  },
+  "exclude": [
+    "**/*.spec.ts",
+    "**/dist"
+  ],
+}
